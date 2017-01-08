@@ -1,0 +1,35 @@
+.ContantContainer {
+    text-align: center;
+    padding: 100px;
+}
+.container {
+
+    text-align: center;
+}
+.header {
+    background-color: aqua;
+    background-image: url('../img/workspace-flat-design.jpg');
+    background-size: cover;
+    min-height: 500px;
+    min-width: 650px;
+  }
+.h1 {
+    color: aliceblue;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 11%;
+    margin: 0;
+}
+.flexContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.menuItem {
+ width: 200px;
+    padding: 20px;
+}
+.imgItem {
+    width: 100px;
+    height: 100px;
+}

@@ -1,4 +1,4 @@
-var app = angular.module('vocabulary', []);
+var app = angular.module('vocabulary', ['ngRoute']);
 
 app.service('API', function ($http, $q) {
     return {
@@ -56,3 +56,4 @@ app.controller('mainController', function ($scope, API) {
     $scope.translateExample = [];
     $scope.synonimsResult = []
 })
+

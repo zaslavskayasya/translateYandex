@@ -4,10 +4,9 @@
     <meta charset="utf-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0/">
     <title>YA</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link  rel="stylesheet" type="text/css" href="css/main.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap.js"></script>
@@ -15,24 +14,52 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
 
     <script src="app.js"></script>
+    <script src="route.js"></script>
 
     </head>
 <body ng-controller="mainController">
 
-<input ng-model="translate.query" type="text">
-<select ng-options="lang.value as lang.title for lang in lang" ng-model="translate.lang"> </select>
-<button ng-click="translateIt()">Translate </button>
-    <p>{{lang.value}}</p>
 
-<div>
-    <p ng-repeat="Result in translateResult">{{Result.text}}</p>
-    <p ng-repeat="Result in translateExample">{{Result.ex}}</p>
-    <p ng-repeat="Result in synonimsResult">{{Result.syn[0].text}}</p>
-    <p ng-repeat="Result in synonimsResult">{{Result.syn[1].text}}</p>
-    <p ng-repeat="Result in synonimsResult">{{Result.syn[2].text}}</p>
-    <p ng-repeat="Result in synonimsResult">{{Result.syn[3].text}}</p>
-    <p ng-repeat="Result in synonimsResult">{{Result.syn[4].text}}</p>
+<div class="wrapper">
+ <header class="header">
+   <h1  class="h1">VOCABULARY</h1>
+ </header>
+    <div class="content">
+        <div class="ContantContainer" >
+            <div class="flexContainer">
+          <div class="menuItem">
+              <a href="#/about">
+              <img class="imgItem" src="img/check-list.svg">
+              <p>Про Нас</p>
+              </a>
+          </div>
+            <div class="menuItem">
+                <a href="#/translate">
+                <img class="imgItem" src="img/job-search.svg">
+                <p>Переводчик</p>
+                </a>
+            </div>
+            <div class="menuItem">
+                <a href="#/synonyms">
+                <img class="imgItem" src="img/hierarchical-structure.svg">
+                <p>Синонимы</p>
+                </a>
+            </div>
+            <div class="menuItem">
+                <a href="#/contacts">
+                <img class="imgItem" src="img/settings.svg">
+                <p>Контакты</p>
+                    </a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-view></div>
+
 </div>
+
+
 
 </body>
 </html>
