@@ -1,16 +1,15 @@
 <div ng-controller="mainController" class="container">
-    <input ng-model="translate.query" type="text">
-    <select ng-options="lang.value as lang.title for lang in lang" ng-model="translate.lang"> </select>
-    <button ng-click="translateIt()">Translate </button>
+    <header class="formheader">Переводчик</header>
+    <form class="Form">
+    <input class="inputS" ng-model="translate.query" placeholder="Ввведите слово" type="text">
+    <select class="inputS" ng-options="lang.value as lang.title for lang in lang" ng-model="translate.lang"> </select>
+    <button class="inputS button" ng-click="translateIt()"> Перевести</button>
     <p>{{lang.value}}</p>
-
+    </form>
 <div>
+
     <p ng-repeat="Result in translateResult">{{Result.text}}</p>
     <p ng-repeat="Result in translateExample">{{Result.ex}}</p>
-    <p ng-repeat="Result in synonimsResult">{{Result.syn[0].text}}</p>
-    <p ng-repeat="Result in synonimsResult">{{Result.syn[1].text}}</p>
-    <p ng-repeat="Result in synonimsResult">{{Result.syn[2].text}}</p>
-    <p ng-repeat="Result in synonimsResult">{{Result.syn[3].text}}</p>
-    <p ng-repeat="Result in synonimsResult">{{Result.syn[4].text}}</p>
+
 </div>
 </div>

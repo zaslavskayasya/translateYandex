@@ -1,10 +1,15 @@
-<div ng-controller="mainController" class="container">
-    <input ng-model="translate.query" type="text">
-    <button ng-click="translateIt()">Синонимы </button>
-    <p>{{lang.value}}</p>
+<div ng-controller="SynonymController" class="container">
+    <header class="formheader">Синонимы</header>
+   <form class="Form">
 
-    <div>
-        <p ng-repeat="Result in translateExample">{{Result.ex}}</p>
+    <input class="inputS" placeholder="введите слово" ng-model="translate.query" type="text">
+    <select class="inputS" ng-options="lang.value as lang.title for lang in lang" ng-model="translate.lang"> </select>
+    <button class="inputS button" ng-click="translateIt()">Подобрать синонимы</button>
+    <p>{{lang.value}}</p>
+   </form>
+    <div class="container">
+
+
         <p ng-repeat="Result in synonimsResult">{{Result.syn[0].text}}</p>
         <p ng-repeat="Result in synonimsResult">{{Result.syn[1].text}}</p>
         <p ng-repeat="Result in synonimsResult">{{Result.syn[2].text}}</p>

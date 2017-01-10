@@ -6,7 +6,7 @@ app.config(function ($routeProvider) {
         controller: '',
         templateUrl: 'templates/about.html'
     }).when('/synonyms' , {
-        controller: 'mainController',
+        controller: 'SynonymController',
         templateUrl: 'templates/synonym.html'
     }).when('/contacts', {
         controller: '',
